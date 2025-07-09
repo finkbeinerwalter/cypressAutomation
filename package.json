@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "cypress": "^14.5.1"
+  },
+  "scripts": {
+    "cy:qa": "cypress run --config-file cypress/configs/qa.config.js",
+    "cy:staging": "cypress run --config-file cypress/configs/staging.config.js",
+    "cy:prod": "cypress run --config-file cypress/configs/prod.config.js",
+    "cy:qa:open": "cypress open --config-file cypress/configs/qa.config.js",
+    "cy:staging:open": "cypress open --config-file cypress/configs/staging.config.js",
+    "cy:prod:open": "cypress open --config-file cypress/configs/prod.config.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.0"
+  }
+}
