@@ -47,9 +47,9 @@ cypress/
 
 ## 🔐 Environment variables
 
-Sensitive values such as usernames and passwords are **not hardcoded**. Cypress loads them via environment variables.
+Sensitive values such as passwords are **not hardcoded**. They will be loaded via environment variables.
 
-If running locally, you can create a `.env` file at the root or use `.env` files per environment (e.g. `.env.prod`).
+If running locally, you should copy the `.env.example` file for the environment under test, rename it to`.env.<environment>`, (e.g. `.env.prod`), and populate it with the sensitive data.
 
 > ⚠️ Do **not** commit real `.env` files. They are ignored via `.gitignore`.
 
@@ -89,3 +89,32 @@ The workflow file is located at:
 
 You can trigger the tests manually from the **Actions** tab on GitHub.  
 All videos and screenshots will be available as downloadable artifacts at the end of the run.
+
+## 🧹 Code Quality: Linting & Formatting
+
+This project uses **ESLint** for code quality checks and **Prettier** for consistent code formatting. Both tools are integrated with **Husky** and **lint-staged** to enforce standards on each commit.
+
+### ✅ Pre-commit Hook
+
+Husky is configured to run `lint-staged` automatically before each commit. It will:
+
+- Lint and format only the files you're committing
+- Prevent the commit if there are linting issues
+
+### 🛠️ Useful commands
+
+You can manually run the following scripts related to linting/formatting:
+
+```bash
+# Check for ESLint issues
+npm run lint
+
+# Automatically fix ESLint issues
+npm run lint:fix
+
+# Check if code is properly formatted with Prettier
+npm run format
+
+# Automatically format code with Prettier
+npm run format:fix
+```
