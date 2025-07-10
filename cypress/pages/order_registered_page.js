@@ -1,10 +1,9 @@
-import { TopBarComponent } from "./reusable_components/top_bar_component";
+import { TopBarComponent } from './reusable_components/top_bar_component'
 
 /**
  * Representation of the Order Registered page
  */
 class OrderRegisteredPage {
-
   getTopBar() {
     return new TopBarComponent()
   }
@@ -14,4 +13,4 @@ class OrderRegisteredPage {
   }
 }
 
-export const orderRegisteredPage = new OrderRegisteredPage();
+export const orderRegisteredPage = new OrderRegisteredPage()

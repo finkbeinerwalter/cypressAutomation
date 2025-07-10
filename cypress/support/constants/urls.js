@@ -1,4 +1,4 @@
 export const URLS = {
   fileUploadUrl: '/file-upload',
-  authEcommerceUrl: '/auth_ecommerce'
-};
+  authEcommerceUrl: '/auth_ecommerce',
+}

@@ -1,12 +1,11 @@
-import { CartRowComponent } from "./reusable_components/cart_row_component";
-import { ShopItemComponent } from "./reusable_components/shop_item_component";
-import { shippingDetailsPage } from "./shipping_details_page";
+import { CartRowComponent } from './reusable_components/cart_row_component'
+import { ShopItemComponent } from './reusable_components/shop_item_component'
+import { shippingDetailsPage } from './shipping_details_page'
 
 /**
  * Representation of the shopping cart page
  */
 class ShoppingCartPage {
-
   getShoppingCartContainer() {
     return cy.get('#prooood')
   }
@@ -29,4 +28,4 @@ class ShoppingCartPage {
   }
 }
 
-export const shoppingCartPage = new ShoppingCartPage();
+export const shoppingCartPage = new ShoppingCartPage()

@@ -1,15 +1,14 @@
-import { orderRegisteredPage } from "./order_registered_page";
+import { orderRegisteredPage } from './order_registered_page'
 
 /**
  * Representation of the Shipping details page
  */
 class ShippingDetailsPage {
-
   /**
    * Completes the shipping details form
    * @param {*} param0 shipping details
    */
-  completeShippingDetails({phone, street, city, country}) {
+  completeShippingDetails({ phone, street, city, country }) {
     cy.get('input[name="phone"]').type(phone)
     cy.get('input[name="street"]').type(street)
     cy.get('input[name="city"]').type(city)
@@ -26,4 +25,4 @@ class ShippingDetailsPage {
   }
 }
 
-export const shippingDetailsPage = new ShippingDetailsPage();
+export const shippingDetailsPage = new ShippingDetailsPage()
