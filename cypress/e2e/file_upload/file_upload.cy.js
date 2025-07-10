@@ -28,6 +28,6 @@ describe('File Upload', () => {
   it('should show error when submitting an upload without selecting a file - (INTENTIONAL FAILURE)', () => {
     fileUploadPage.visit()
     fileUploadPage.submit()
-    fileUploadPage.getMessageBox().should('include.text', MESSAGES.missingFileMessage)
+    fileUploadPage.getMessageBox().should('include.text', MESSAGES.missingFile)
   })
 })

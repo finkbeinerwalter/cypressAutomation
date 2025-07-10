@@ -24,7 +24,7 @@ jobs:
           USER_EMAIL: ${{ secrets.USER_EMAIL }}
           USER_PASSWORD: ${{ secrets.USER_PASSWORD }}
         run: |
-          npx cypress run --config-file=cypress/configs/prod.config.js
+          npm run cy:prod:cicd
       - name: Save Cypress artifacts
         if: always()
         uses: actions/upload-artifact@v4
@@ -33,3 +33,4 @@ jobs:
           path: |
             cypress/videos
             cypress/screenshots
+            cypress/reports
